@@ -110,7 +110,7 @@ Go also makes deployment a breeze. While Node.js apps often require npm install,
 
 - Projects that require a lot of dynamic typing or runtime type changes (Go is statically typed and not as flexible as JavaScript or Python for dynamic data structures).
 - Codebases that rely heavily on advanced generics or metaprogramming (Go's generics are intentionally simple and less expressive than those in TypeScript, Rust, or C++).
-- Rapid prototyping where developer speed and a huge ecosystem of libraries (like npm for JS or PyPI for Python) are critical—Go's ecosystem is strong but not as broad for every domain.
+- Rapid prototyping where developer speed and a huge ecosystem of libraries (like npm for JS or PyPI for Python) are critical. Go's ecosystem is strong but not as broad for every domain.
 - Projects where you need mature, specialized libraries for things like data science, machine learning, or scientific computing (Go's ecosystem is growing, but not as deep as Python's in these areas).
 - Teams that require hot-reloading, scripting, or embedding code at runtime (Go is compiled and not designed for scripting or live code changes).
 
@@ -170,6 +170,8 @@ Go is statically typed, so once a variable has a type, it can't be reassigned to
 
 #### Integers
 
+Unlike JavaScript, which uses a single `number` type for all integers, Go provides several distinct integer types. Each type has its own range and memory usage, allowing you to choose the most appropriate one for your needs.
+
 | **Type** | **Size**                                     | **Range (approximate)**         |
 | -------- | -------------------------------------------- | ------------------------------- |
 | int8     | 8-bit                                        | -128 to 127                     |
@@ -182,6 +184,8 @@ Go is statically typed, so once a variable has a type, it can't be reassigned to
 | uint64   | 64-bit                                       | 0 to 18 quintillion             |
 | int      | platform dependent (usually 32 or 64 bits)   |                                 |
 | uint     | platform dependent (unsigned version of int) |                                 |
+
+For example, if you need to store an RGB (Red, Green, Blue) value ranging from 0 to 255, the best choice is `uint8` (an unsigned 8-bit integer), since it efficiently covers exactly that range. If you need to store larger values, simply choose an integer type with a bigger bit size, such as `uint16`, `uint32`, or `uint64`, depending on your requirements.
 
 ##### Key Notes
 
