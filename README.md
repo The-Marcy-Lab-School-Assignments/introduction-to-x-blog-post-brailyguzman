@@ -71,6 +71,7 @@ Go is designed for simplicity, speed, and reliability. It compiles to a single b
 - Go's type system, variables, and data structures
 - How to handle strings, bytes, and runes (Unicode!)
 - Using Go's `strings` package for text manipulation
+- Go's powerful concurrency model (goroutines, channels, and more)
 - Common pitfalls for JS devs switching to Go
 - How to build and run Go code
 
